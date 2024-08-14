@@ -5,6 +5,7 @@ import ProgressBar from "./Components/ProresssBar"
 
 function App() {
   const [value, setValue] = useState(0);
+  const [success, setSuccess] = useState(false);
 
   useEffect(()=>{
     setInterval(()=>{
@@ -15,7 +16,10 @@ function App() {
     <>
       <div className="App">
         <span>Progress Bar</span>
-        <ProgressBar value = {value}/>
+        <ProgressBar 
+        value = {value}
+        onComplete = {()=>setSuccess(true)}/>
+        <span>{success?"Complete!":"Loading.."}</span>
       </div>
     </>
   );

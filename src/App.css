@@ -15,12 +15,15 @@ body{
   border: 1px gray;
   border-radius: 8px;
   overflow: hidden;
+  position: relative;
+
 }
 .progress span{
   position: absolute;
   width: 100%;
   display: flex;
   justify-content: center;
+  z-index: 2;
 }
 .progress div{
   height: 100%;
