@@ -1,31 +1,29 @@
-.App {
-  text-align: center;
+body{
+  font-family: sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap:7px;
+  margin-top: 20px;
+}
+.progress{
+  height: 20px;
+  width: 100%;
+  background-color: rgb(192, 192, 198);
+  border: 1px gray;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.progress span{
+  position: absolute;
+  width: 100%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-.heart {
-  color: #ff0000;
-}
-
-.small {
-  font-size: 0.75rem;
+.progress div{
+  height: 100%;
+  
+  background-color: aquamarine;
 }

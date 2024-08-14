@@ -1,28 +1,23 @@
+import { useEffect, useState } from 'react';
 import './App.css';
+import ProgressBar from "./Components/ProresssBar"
+
 
 function App() {
+  const [value, setValue] = useState(0);
+
+  useEffect(()=>{
+    setInterval(()=>{
+      setValue((val)=>val+1)
+    },100);
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
+    <>
+      <div className="App">
+        <span>Progress Bar</span>
+        <ProgressBar value = {value}/>
+      </div>
+    </>
   );
 }
 
